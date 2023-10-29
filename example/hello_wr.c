@@ -154,7 +154,7 @@ static int hello_write(const char *path, char *buf, size_t size, off_t offset,
 	strcpy(toshell, "echo \"");
 	memcpy(toshell+6, buf, size);
 	toshell[6+size] = '\0';
-	strcat(toshell, "\"| mail -s \"CS270 testing\" ziaowang@ucsb.edu");
+	strcat(toshell, "\"| mail -s \"CS270 testing\" rich@cs.ucsb.edu");
 	printf("%s\n", toshell);
 	system(toshell);
 	free(toshell);
