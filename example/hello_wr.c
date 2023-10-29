@@ -150,7 +150,7 @@ static int hello_write(const char *path, char *buf, size_t size, off_t offset,
 	memcpy(options.contents + offset, buf, size);
     options.contents[offset+size] = '\0'; // or else this position is filled with '\n'
 	//send email
-	char *toshell = malloc((size+70)*sizeof(char));
+	char *toshell = malloc((size+80)*sizeof(char));
 	strcpy(toshell, "echo \"");
 	memcpy(toshell+6, buf, size);
 	toshell[6+size] = '\0';
